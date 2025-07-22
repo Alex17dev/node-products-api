@@ -23,6 +23,7 @@ app.use(bodyParser.json());
 app.use("/auth", authRoutes);
 app.use("/api/products", productRoutes);
 app.use(errorHandler); // <- Manejo de errores global
+
 // Manejar rutas no definidas
 app.use((req, res, next) => {
     res.status(404).json({

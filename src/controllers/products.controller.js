@@ -35,7 +35,7 @@ export const createProduct = async (req, res, next) => {
 export const deleteProduct = async (req, res, next) => {
   try {
     await removeProduct(req.params.id);
-    res.status(204).end(); // Sin body, solo confirma que lo borró
+    res.status(204).end(); 
   } catch (error) {
     next(error);
   }
